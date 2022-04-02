@@ -10,6 +10,9 @@ export default defineUserConfig<DefaultThemeOptions>({
 	// theme and its config
 	theme: '@vuepress/theme-default',
 	themeConfig: {
+		repo: 'ModdieDiscord/Moddie',
+		docsBranch: 'master',
+		docsRepo: 'ModdieDiscord/docs',
 		navbar: [
 			{
 				text: 'Documentation',
@@ -22,7 +25,10 @@ export default defineUserConfig<DefaultThemeOptions>({
 				text: 'Self-host',
 				link: '/docs/self-host/',
 				children: [
-					'selfhost-public-api'
+					{
+						text: 'Self-host with the public Developer API',
+						link: '/docs/self-host/selfhost-public-api/'
+					}
 				]
 			}
 		]
